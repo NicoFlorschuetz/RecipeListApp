@@ -34,14 +34,14 @@ class DataService{
                 let recipeData = try decoder.decode([Recipe].self, from: data)
                 
                 //Add the uniqe IDs
-                for r in recipeData{
-                    r.id = UUID()
-                    
-                    //Add unique IDs to the recipe ingredients 
-                    for i in r.ingredients{
-                        i.id = UUID()
-                    }
-                }
+                for r in recipeData {
+                     r.id = UUID()
+                     
+                     // Add unique IDs to recipe ingredients
+                     for i in r.ingredients {
+                         i.id = UUID()
+                     }
+                 }
                 //Return the recipes
                 return recipeData
             }
