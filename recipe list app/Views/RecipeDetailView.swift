@@ -42,7 +42,7 @@ struct RecipeDetailView: View {
                         .font(.headline)
                         .padding([.bottom, .top], 5)
                     ForEach(0..<recipe.directions.count, id:\.self){ itemNumber in
-                        Text(String(itemNumber+1) + ".mm " + recipe.directions[itemNumber])
+                        Text(String(itemNumber+1) + ". " + recipe.directions[itemNumber])
                             .padding(.bottom, 5)
                     }
                 }
